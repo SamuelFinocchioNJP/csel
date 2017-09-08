@@ -27,9 +27,13 @@ const ResourceSchema = new Schema({
     leading: {
         type: Boolean,
         default: false
-    }
+    },
 
-    // TODO: Reference to the User uploading the content
+    // Reference to the User uploading the content
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 
 // Defining model

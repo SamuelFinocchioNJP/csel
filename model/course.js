@@ -18,9 +18,13 @@ const CourseSchema = new Schema({
         lowercase: true,
         unique: true,
         required: [true, 'attribute required']
-    }
+    },
 
-    // TODO: Array of contents
+    // Array of resources
+    resources: [{
+        type: Schema.Types.ObjectId, 
+        ref: 'Resource'
+    }]
 });
 
 

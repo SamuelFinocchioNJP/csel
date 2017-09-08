@@ -32,4 +32,4 @@ app.get('/', function (req, res) {
 
 app.listen(configuration.port, function() {
     console.log ('CSEL Running on port ' + configuration.port);
-}); 
+});
