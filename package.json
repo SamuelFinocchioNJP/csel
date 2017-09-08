@@ -1,0 +1,20 @@
+{
+  "name": "csel",
+  "version": "1.0.0",
+  "description": "Computer Science E-learning sharing content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Finocchio (InformaticageNJP)",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.10",
+    "morgan": "^1.8.2",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0"
+  }
+}
