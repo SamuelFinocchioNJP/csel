@@ -101,13 +101,13 @@ UserSchema.post('save', function(error, doc, next) {
 
 // Comparing the password - Hash matching
 UserSchema.methods.comparePassword = function(password, next) {
-    return bcrypt.compareSync(password, this.password, function(err, matching) {
-        // Cant compare password and hash
-        if(err)
-            return next(err);
+    return bcrypt.compare(password, this.password).then(function(matching){
+      // Cant compare password and hash
+      if(err)
+          return next(err);
 
-        // Returns true / false
-        return matching;
+      // Returns true / false
+      return next(matching);
     });
 };
 
